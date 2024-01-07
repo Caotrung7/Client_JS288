@@ -1,0 +1,59 @@
+
+// Lấy các phần tử HTML cần thiết
+var minPriceInput = document.getElementById("minPrice");
+var maxPriceInput = document.getElementById("maxPrice");
+var filteredResults = document.getElementById("filteredResults");
+
+// Lắng nghe sự kiện thay đổi giá trị của thanh trượt
+minPriceInput.addEventListener("input", filterByPrice);
+maxPriceInput.addEventListener("input", filterByPrice);
+
+// Hàm thực hiện việc lọc dựa trên giá
+function filterByPrice() {
+  // Lấy giá trị min và max từ thanh trượt
+  var minPrice = parseInt(minPriceInput.value);
+  var maxPrice = parseInt(maxPriceInput.value);
+  
+  // Thực hiện lọc dữ liệu ở đây
+  var filteredData = data.filter(function(item) {
+    return item.price >= minPrice && item.price <= maxPrice;
+  });
+  
+  // Hiển thị kết quả lọc
+  filteredResults.textContent = "Số lượng sản phẩm thỏa mãn: " + filteredData.length;
+}
+
+// Dữ liệu mẫu (thay thế bằng dữ liệu thực tế của bạn)
+var data = [
+  { name: "TV 1", price: 500 },
+  { name: "TV 2", price: 800 },
+  { name: "TV 3", price: 1200 },
+  // ...
+];
+
+// Ban đầu, hiển thị tất cả các sản phẩm
+filteredResults.textContent = "Số lượng sản phẩm thỏa mãn: " + data.length;   
+
+---------LOC GIA THEO RANGE--------------
+const locGia = (tag) => {
+    ds.sort((a, b) => {
+        return a.Don_gia_Ban - b.Don_gia_Ban
+    })
+    console.log(tag.value)
+    let priceDefault = document.getElementById("thGia");
+    priceDefault.value = priceDefault.getAttribute("max");
+    
+    let min = ds[0].Don_gia_Ban;
+    let max = ds[ds.length - 1].Don_gia_Ban;
+    tag.setAttribute("min", min)
+    tag.setAttribute("max", max)
+    tag.setAttribute("step", (max - min) / 10)
+    //document.getElementById("giaMax").innerHTML=`${Number(tag.value).toLocaleString()}<sup>đ</sup>`
+    document.getElementById("giaMin").innerHTML = `${Number(min).toLocaleString()}<sup>đ</sup>`
+    document.getElementById("giaMax").innerHTML = `${Number(max).toLocaleString()}<sup>đ</sup>`
+    let tmp = ds.filter(x => x.Don_gia_Ban <= Number(tag.value));
+    let tmp1 = ds.filter(x => x.Don_gia_Ban >= Number(tag.value) && x.Don_gia_Ban <= max)
+    let tmp2 = ds.filter(x => x.Don_gia_Ban >= min && x.Don_gia_Ban <= Number(tag.value))
+
+    xuatTivi(tmp2, thTivi)
+}

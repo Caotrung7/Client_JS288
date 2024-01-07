@@ -1,0 +1,13 @@
+.text-chocolate{
+    color: chocolate !important;
+}
+
+.breadcrumb{
+    background-color:whitesmoke;
+    margin-bottom: 0.1rem;
+}
+.jumbotron{
+    background-color: teal;
+    color: whitesmoke;
+    margin-bottom: 0rem;
+}

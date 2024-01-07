@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Shop - Home</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="../images/ic_launcher.png" type="image/png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="../css/styles.css" rel="stylesheet" />
+    <link href="../css/main.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark header-bg sticky-top">
+        <div class="container px-4 px-lg-5">
+            <a href="" class="header-link">
+                <span class="header-brand-sup1">AT+ SHOP</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href=".">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Products</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="../tivi/">Tivi</a></li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li><a class="dropdown-item" href="../mobile/">Mobile</a></li>
+                            <li><a class="dropdown-item" href="../food/">Food</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="../contact/">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link"
+                            href="../Administration-system/admin_login.html">Administration-system</a></li>
+                </ul>
+                <form class="d-flex">
+                    <button class="btn btn-primary header-bg-blue" type="button" onclick="openCart()">
+                        <i class="bi-cart-fill me-1"></i>
+                        View Your Cart
+                        <span class="badge bg-dark text-white ms-1 rounded-pill" id="Th_Gio_hang">0</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- Header-->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-2 col-xl-2">
+                    <img class="card-img-top" src="../images/AT logo.jpg" alt="">
+                </div>
+                <div class="col-12 col-md-10 col-xl-10">
+                    <div class="text-white" id="thCuahang"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Section-->
+    <section class="py-2">
+        <div class="container px-4 px-lg-5">
+            <h4>Tivi</h4>
+            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center" id="thTivi">
+            </div>
+            <div class="text-right">
+                <a href="../tivi/" class="btn btn-sm btn-outline-info">Read More</a>
+            </div>
+            <h4>Mobile</h4>
+            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center" id="thMobile">
+            </div>
+            <div class="text-right">
+                <a href="../mobile/" class="btn btn-sm btn-outline-info">Read More</a>
+            </div>
+            <h4>Food</h4>
+            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center" id="thFood">
+            </div>
+            <div class="text-right">
+                <a href="../food/" class="btn btn-sm btn-outline-info">Read More</a>
+            </div>
+        </div>
+    </section>
+    <!-- Footer-->
+    <footer class="py-5 mt-5 footer-bg">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Your Website 2024</p>
+        </div>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="../js/api.js"></script>
+    <script src="../js/home.js"></script>
+    <script src="../js/modal.js"></script>
+    <script src="../js/cart.js"></script>
+
+    <script>
+        if (sessionStorage.getItem("carts") != undefined) {
+            carts = JSON.parse(sessionStorage.getItem("carts"))
+            Th_Gio_hang.innerHTML = carts.length;
+        }
+
+        apiCuahang().then((result) => {
+            //console.log(result);
+            xuatCuahang(result, thCuahang);
+
+            apiTivi().then((result) => {
+                //console.log(result.noiDung)
+                lst.Tivi = result.noiDung
+                xuatKhuyenmai(result.noiDung, thTivi, 1);
+
+                apiDienthoai().then((result) => {
+                    xuatKhuyenmai(result.noiDung, thMobile, 2);
+                    lst.Mobile = result.noiDung
+
+                    apiMathang().then((result) => {
+                        xuatKhuyenmai(result.noiDung, thFood, 3);
+                        lst.Food = result.noiDung
+
+                        if (window.Worker) {
+                            var worker = new Worker("../js/worker_countDownDate.js")
+                            worker.addEventListener('message', function (e) {
+                                document.querySelectorAll(".countDown").forEach(item => {
+                                    item.innerHTML = e.data
+                                })
+                            }, false)
+
+                            function Goi_thong_tin() {
+                                var countDownDate = new Date("January 31, 2024 07:00:00").getTime();
+                                worker.postMessage({ 'Ngay': countDownDate })
+                            }
+
+                            Goi_thong_tin()
+                        }
+                        else {
+                            alert('Trình duyệt của bạn không hỗ trợ')
+                        }
+
+                    })
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>
